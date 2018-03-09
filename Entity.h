@@ -10,7 +10,7 @@ class Entity
 public:
 	Entity();
 	~Entity();
-	virtual void update();
+	//virtual void update();
 protected:
 
 	entityType type;
