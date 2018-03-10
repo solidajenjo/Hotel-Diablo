@@ -1,10 +1,10 @@
 #pragma once
 #include "Entity.h"
 #include <time.h>
-class Time :
-	public Entity
-{
+
+class Time{
 public:
+	
 	Time(PrintUtilities* pu);
 	~Time();
 	virtual void update();

@@ -4,7 +4,7 @@ class Exit :
 	public Entity
 {
 public:
-	Exit();
+	using Entity::Entity;
 	~Exit();
 	virtual void update();
 };

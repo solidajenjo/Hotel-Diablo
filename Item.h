@@ -4,7 +4,7 @@ class Item :
 	public Entity
 {
 public:
-	Item();
+	using Entity::Entity;
 	~Item();
 	virtual void update();
 };

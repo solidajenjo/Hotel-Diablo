@@ -9,9 +9,14 @@ using namespace std;
 class Entity
 {
 public:
-	Entity();
+	explicit Entity(string description);
 	~Entity();
 	virtual void update();
+
+	void setName(string name);
+	string getName();
+	void insertItem(Entity* item);
+
 protected:
 
 	entityType type;

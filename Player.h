@@ -3,8 +3,7 @@
 class Player :
 	public Creature
 {
-public:
-	Player();
+public:	
 	~Player();
 	virtual void update();
 };

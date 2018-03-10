@@ -46,7 +46,7 @@ void Time::update()
 	}
 	if (seconds != lastSecond) {
 		string strSecond = to_string(seconds);
-		Beep(523, 20);
+		//Beep(523, 20);
 		if (seconds < 10) strSecond = '0' + strSecond;
 		string strMinute = to_string(minutes);
 		if (minutes < 10) strMinute = '0' + strMinute;

@@ -3,8 +3,7 @@
 class NPC :
 	public Creature
 {
-public:
-	NPC();
+public:	
 	~NPC();
 	virtual void update();
 };

@@ -6,7 +6,7 @@ class Creature :
 	public Entity
 {
 public:
-	Creature();
+	using Entity::Entity;
 	~Creature();
 	virtual void update();
 private:
