@@ -154,6 +154,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PrintUtilities.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -163,10 +164,11 @@
     <ClCompile Include="Creature.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Exit.cpp" />
-    <ClCompile Include="Hotel Diablo.cpp" />
+    <ClCompile Include="HotelDiablo.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PrintUtilities.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
