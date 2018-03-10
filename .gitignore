@@ -7,3 +7,6 @@ Debug/Hotel Diablo.log
 *.obj
 *.tlog
 *.tlog
+*.pch
+*.idb
+*.pdb
