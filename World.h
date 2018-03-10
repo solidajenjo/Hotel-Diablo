@@ -4,5 +4,6 @@ class World
 public:
 	World();
 	~World();
+	virtual void update();
 };
 

@@ -6,7 +6,8 @@ using namespace std;
 PrintUtilities::PrintUtilities()
 {
 	hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
-
+	order = "";
+	newOrder = true;
 	//init game output
 	for (int i = 0; i < GAME_OUTPUT_SIZE; ++i) {
 		gameOutput.push_back("");		
@@ -82,7 +83,7 @@ void PrintUtilities::render()
 }
 
 string PrintUtilities::manageInput()
-{		
+{			
 	if (newOrder) {		
 		xInput = 1;
 		yInput = INPUT_Y;
@@ -112,7 +113,7 @@ string PrintUtilities::manageInput()
 			newOrder = true;
 			return order;
 		}
-		else {
+		else if (order.size() < MAX_INPUT_SIZE){
 			order += c;
 			cout << c;
 		}

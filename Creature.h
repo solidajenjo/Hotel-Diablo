@@ -8,6 +8,7 @@ class Creature :
 public:
 	Creature();
 	~Creature();
+	virtual void update();
 private:
 	Room* location;
 };

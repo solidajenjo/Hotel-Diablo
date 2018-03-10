@@ -11,4 +11,7 @@ Entity::~Entity()
 {
 }
 
+void Entity::update() {
+
+}
 

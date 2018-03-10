@@ -6,5 +6,6 @@ class NPC :
 public:
 	NPC();
 	~NPC();
+	virtual void update();
 };
 

@@ -6,5 +6,6 @@ class Item :
 public:
 	Item();
 	~Item();
+	virtual void update();
 };
 

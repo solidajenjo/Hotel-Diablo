@@ -23,9 +23,9 @@ private:
 	HANDLE hStdout;
 	COORD destCoord;
 	vector<string> gameOutput;
-	string order = "";
+	string order;
 	char c;
-	bool newOrder = true;
+	bool newOrder;
 	int xInput, yInput;
 	string consoleClearLine;
 };

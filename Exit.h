@@ -6,5 +6,6 @@ class Exit :
 public:
 	Exit();
 	~Exit();
+	virtual void update();
 };
 

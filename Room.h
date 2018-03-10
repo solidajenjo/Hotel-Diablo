@@ -6,6 +6,7 @@ class Room :
 public:
 	Room();
 	~Room();
+	virtual void update();
 private:
 	directions direction;
 	Room* source;

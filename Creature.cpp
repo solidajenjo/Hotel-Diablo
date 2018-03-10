@@ -11,3 +11,7 @@ Creature::Creature()
 Creature::~Creature()
 {
 }
+
+void Creature::update() {
+
+}
