@@ -1,10 +1,12 @@
 #pragma once
 #include "Creature.h"
-class NPC :
+
+class _NPC :
 	public Creature
 {
 public:	
-	~NPC();
+	using Creature::Creature;
+	~_NPC();
 	virtual void update();
 };
 

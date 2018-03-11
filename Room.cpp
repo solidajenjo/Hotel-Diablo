@@ -17,7 +17,18 @@ void Room::showRoom(PrintUtilities * pu)
 	pu->consoleCout("\bObjetos:");
 	while (it != contains.end()) {
 		Entity* item = *it;
-		pu->consoleCout("\b  "+item->getName());
+		if (item->getType() == ITEM) {
+			pu->consoleCout("\b  " + item->getName());
+		}
+		it++;
+	}
+	it = contains.begin();
+	pu->consoleCout("\bPersonas:");
+	while (it != contains.end()) {
+		Entity* npc = *it;
+		if (npc->getType() == NPC) {
+			pu->consoleCout("\b  " + npc->getName());
+		}
 		it++;
 	}
 }

@@ -26,7 +26,22 @@ string Entity::getName()
 	return name;
 }
 
-void Entity::insertItem(Entity* item)
+void Entity::insertEntity(Entity* item)
 {
 	contains.push_back(item);
+}
+
+void Entity::removeItem(Entity * item)
+{
+	contains.remove(item);
+}
+
+void Entity::setType(entityType type)
+{
+	this->type = type;
+}
+
+entityType Entity::getType()
+{
+	return type;
 }

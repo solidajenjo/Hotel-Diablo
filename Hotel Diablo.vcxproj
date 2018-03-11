@@ -152,7 +152,7 @@
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Exit.h" />
     <ClInclude Include="Item.h" />
-    <ClInclude Include="NPC.h" />
+    <ClInclude Include="_NPC.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PrintUtilities.h" />
     <ClInclude Include="Room.h" />
@@ -167,7 +167,7 @@
     <ClCompile Include="Exit.cpp" />
     <ClCompile Include="HotelDiablo.cpp" />
     <ClCompile Include="Item.cpp" />
-    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="_NPC.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PrintUtilities.cpp" />
     <ClCompile Include="Room.cpp" />

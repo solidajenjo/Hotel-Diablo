@@ -1,6 +1,7 @@
 #pragma once
 #include "Entity.h"
 #include "Room.h"
+#include "_NPC.h"
 #include <map>
 class World
 {

@@ -15,8 +15,10 @@ public:
 
 	void setName(string name);
 	string getName();
-	void insertItem(Entity* item);
-
+	void insertEntity(Entity* item);
+	void removeItem(Entity* item);
+	void setType(entityType type);
+	entityType getType();
 protected:
 
 	entityType type;
