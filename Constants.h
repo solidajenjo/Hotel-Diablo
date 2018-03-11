@@ -5,24 +5,9 @@ enum entityType {
 };
 
 enum directions {
-	NORTH, EAST, SOUTH, WEST
+	_NORTH, _EAST, _SOUTH, _WEST, ATRAVESARH105, ATRAVESARH107, ATRAVESARH106, ATRAVESARH108, ATRAVESARH101, ATRAVESARH102, ATRAVESARH104, ATRAVESARH103
 };
 
-//verbos
-#define TAKE "COGER"
-#define LOOK "MIRAR"
-#define PUSH "EMPUJAR"
-#define USE "USAR"
-
-//movimientos
-#define NORTH "NORTE"
-#define SHORT_NORTH "N"
-#define EAST "ESTE"
-#define SHORT_EAST "E"
-#define WEST "WEST"
-#define SHORT_WEST "W"
-#define SOUTH "SUR"
-#define SHORT_SOUTH "S"
 
 //keycodes
 #define KEY_BACKSPACE 8
@@ -53,7 +38,8 @@ enum directions {
 #define MINUTE_5_WARNING "5 minutos. Tiene pinta de que vas a fracasar."
 #define MINUTE_1_WARNING "1 minuto. MUAHAHAHAHAHA..."
 #define OUT_OF_TIME "Se acabo el tiempo. Justo debajo de tus pies se abre un    agujero. Caes hacia el abismo. Te quedas flotando en el     vacio por toda la eternidad lamentando tu torpeza.          Gracias por visitar el Hotel Diablo, te animo a intentarlo  de nuevo."
-
+#define I_CANT_DO_THAT_CODE 2
+#define I_CANT_DO_THAT "No puedo hacer eso."
 //time
 #define TOTAL_TIME 15*60 //10 minutes
 

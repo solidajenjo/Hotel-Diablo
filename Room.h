@@ -9,10 +9,10 @@ public:
 	~Room();
 	virtual void update();
 	void showRoom(PrintUtilities* pu);
-
+	vector<Entity*> getExits();
+	bool isLocked();
+	void lockDoor();
 private:
-	directions direction;
-	Room* source;
-	Room* destination;
+	bool locked = false;
 };
 

@@ -31,7 +31,7 @@ void Entity::insertEntity(Entity* item)
 	contains.push_back(item);
 }
 
-void Entity::removeItem(Entity * item)
+void Entity::removeEntity(Entity * item)
 {
 	contains.remove(item);
 }

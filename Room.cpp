@@ -31,6 +31,40 @@ void Room::showRoom(PrintUtilities * pu)
 		}
 		it++;
 	}
+	it = contains.begin();
+	pu->consoleCout("\bSalidas:");
+	while (it != contains.end()) {
+		Entity* exit = *it;
+		if (exit->getType() == EXIT) {
+			pu->consoleCout("\b  " + exit->getName());
+		}
+		it++;
+	}
 }
+
+vector<Entity*> Room::getExits()
+{
+	list<Entity*>::iterator it = contains.begin();
+	vector<Entity*> exits;
+	while (it != contains.end()) {
+		Entity* exit = *it;
+		if (exit->getType() == EXIT) {
+			exits.push_back(exit);
+		}
+		it++;
+	}
+	return exits;
+}
+
+bool Room::isLocked()
+{
+	return locked;
+}
+
+void Room::lockDoor()
+{
+	locked = true;
+}
+
 
 
