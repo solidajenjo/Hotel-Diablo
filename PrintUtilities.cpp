@@ -129,3 +129,12 @@ string PrintUtilities::manageInput()
 	}
 	return "";
 }
+
+void PrintUtilities::updateInventory(set<Entity*> inventory)
+{
+	coutXY(INVENTORY_X, INVENTORY_Y, "Inventario " + to_string(inventory.size()) + "/3");
+	int i = 1;
+	for (set<Entity*>::iterator it = inventory.begin(); it != inventory.end(); ++it) {
+		coutXY(INVENTORY_X, INVENTORY_Y + (i++), (*it)->getName());
+	}
+}

@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "PrintUtilities.h"
 #include <time.h>
 
 class Time{

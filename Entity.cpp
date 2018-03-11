@@ -2,6 +2,10 @@
 #include "Entity.h"
 
 
+Entity::Entity()
+{
+}
+
 Entity::Entity(string description)
 {
 	this->description = description;

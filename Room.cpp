@@ -61,6 +61,15 @@ bool Room::isLocked()
 	return locked;
 }
 
+bool Room::containsItem(Item * item)
+{
+	if (item == nullptr) return false;
+	for (list<Entity*>::iterator it = contains.begin(); it != contains.end(); it++) {
+		if (*it == item) return true;
+	}
+	return false;
+}
+
 void Room::lockDoor()
 {
 	locked = true;

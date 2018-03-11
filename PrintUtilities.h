@@ -4,6 +4,8 @@
 #include <vector>
 #include <iostream>
 #include <conio.h>
+#include <set>
+#include "Item.h"
 #include "Constants.h"
 
 using namespace std;
@@ -18,6 +20,7 @@ public:
 	void consoleCout(string msg);
 	void render();
 	string manageInput();
+	void updateInventory(set<Entity*> inventory);
 
 private:
 	HANDLE hStdout;

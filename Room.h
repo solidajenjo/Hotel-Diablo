@@ -1,6 +1,8 @@
 #pragma once
 #include "Entity.h"
 #include "Item.h"
+#include "PrintUtilities.h"
+
 class Room :
 	public Entity
 {
@@ -11,6 +13,7 @@ public:
 	void showRoom(PrintUtilities* pu);
 	vector<Entity*> getExits();
 	bool isLocked();
+	bool containsItem(Item* item);
 	void lockDoor();
 private:
 	bool locked = false;

@@ -28,6 +28,8 @@ enum directions {
 #define MAX_INPUT_SIZE 117
 #define TIME_Y 3
 #define TIME_X 98
+#define INVENTORY_X 5
+#define INVENTORY_Y 10
 //messages
 // á \240 | é \202 | í \241 | ó \242 | ú \243 | ñ \244
 #define BAD_GRAMMAR_CODE 1
@@ -40,6 +42,9 @@ enum directions {
 #define OUT_OF_TIME "Se acabo el tiempo. Justo debajo de tus pies se abre un    agujero. Caes hacia el abismo. Te quedas flotando en el     vacio por toda la eternidad lamentando tu torpeza.          Gracias por visitar el Hotel Diablo, te animo a intentarlo  de nuevo."
 #define I_CANT_DO_THAT_CODE 2
 #define I_CANT_DO_THAT "No puedo hacer eso."
+#define INVENTORY_FULL "No puedes llevar m\240s cosas."
+#define UNOWNED_OBJECT "No tienes ese objeto."
+#define NOT_NEAR_OBJECT "No veo eso por aqu\241 cerca."
 //time
 #define TOTAL_TIME 15*60 //10 minutes
 

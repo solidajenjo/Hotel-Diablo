@@ -11,7 +11,7 @@ public:
 	virtual void update();
 	void setCurrentRoom(Room* room);
 	Room* getCurrentRoom();
-private:
+protected:
 	Room* location;
 };
 

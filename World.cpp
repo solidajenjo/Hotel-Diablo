@@ -54,69 +54,69 @@ World::World()
 	maintenance->lockDoor();
 
 	//items	
-	entities["STICK"] = new Item(DESC_STICK);
-	entities["STICK"]->setName("PALO");
-	entities["STICK"]->setType(ITEM);
-	entities["STONE"] = new Item(DESC_STONE);
-	entities["STONE"]->setName("PIEDRA");
-	entities["STONE"]->setType(ITEM);
-	entities["VASE"] = new Item(DESC_VASE);
-	entities["VASE"]->setName("JARRON");
-	entities["VASE"]->setType(ITEM);
-	entities["POISON"] = new Item(DESC_POISON);
-	entities["POISON"]->setName("MATARRATAS");
-	entities["POISON"]->setType(ITEM);
-	entities["WRENCH"] = new Item(DESC_WRENCH);
-	entities["WRENCH"]->setName("HERRAMIENTA");
-	entities["WRENCH"]->setType(ITEM);
-	entities["HAMMER"] = new Item(DESC_HAMMER);
-	entities["HAMMER"]->setName("MARTILLO");
-	entities["HAMMER"]->setType(ITEM);
-	entities["NAILS"] = new Item(DESC_NAILS);
-	entities["NAILS"]->setName("CLAVOS");
-	entities["NAILS"]->setType(ITEM);
-	entities["KEY_H106"] = new Item(DESC_KEYR106);
-	entities["KEY_H106"]->setName("LLAVE106");
-	entities["KEY_H106"]->setType(ITEM);
-	entities["CASE"] = new Item(DESC_CASE);
-	entities["CASE"]->setName("MALETA");
-	entities["CASE"]->setType(ITEM);
-	entities["GUN"] = new Item(DESC_GUN);
-	entities["GUN"]->setName("PISTOLA");
-	entities["GUN"]->setType(ITEM);
-	entities["CHICKEN"] = new Item(DESC_CHICKEN);
-	entities["CHICKEN"]->setName("POLLO");
-	entities["CHICKEN"]->setType(ITEM);
-	entities["CHAIR"] = new Item(DESC_CHAIR);
-	entities["CHAIR"]->setName("SILLA");
-	entities["CHAIR"]->setType(ITEM);
-	entities["CORD"] = new Item(DESC_CORD);
-	entities["CORD"]->setName("CORDEL");
-	entities["CORD"]->setType(ITEM);
-	entities["CLOSET"] = new Item(DESC_CLOSET);
-	entities["CLOSET"]->setName("ARMARIO");
-	entities["CLOSET"]->setType(ITEM);
-	entities["LOCK"] = new Item(DESC_LOCK);
-	entities["LOCK"]->setName("CANDADO");
-	entities["LOCK"]->setType(ITEM);
-	entities["SCREW"] = new Item(DESC_SCREW);
-	entities["SCREW"]->setName("TORNILLO");
-	entities["SCREW"]->setType(ITEM);
-	entities["DRINK"] = new Item(DESC_DRINK);
-	entities["DRINK"]->setName("BEBIDA");
-	entities["DRINK"]->setType(ITEM);
+	entities["PALO"] = new Item(DESC_STICK);
+	entities["PALO"]->setName("PALO");
+	entities["PALO"]->setType(ITEM);
+	entities["PIEDRA"] = new Item(DESC_STONE);
+	entities["PIEDRA"]->setName("PIEDRA");
+	entities["PIEDRA"]->setType(ITEM);
+	entities["JARRON"] = new Item(DESC_VASE);
+	entities["JARRON"]->setName("JARRON");
+	entities["JARRON"]->setType(ITEM);
+	entities["MATARRATAS"] = new Item(DESC_POISON);
+	entities["MATARRATAS"]->setName("MATARRATAS");
+	entities["MATARRATAS"]->setType(ITEM);
+	entities["HERRAMIENTA"] = new Item(DESC_WRENCH);
+	entities["HERRAMIENTA"]->setName("HERRAMIENTA");
+	entities["HERRAMIENTA"]->setType(ITEM);
+	entities["MARTILLO"] = new Item(DESC_HAMMER);
+	entities["MARTILLO"]->setName("MARTILLO");
+	entities["MARTILLO"]->setType(ITEM);
+	entities["CLAVOS"] = new Item(DESC_NAILS);
+	entities["CLAVOS"]->setName("CLAVOS");
+	entities["CLAVOS"]->setType(ITEM);
+	entities["LLAVE106"] = new Item(DESC_KEYR106);
+	entities["LLAVE106"]->setName("LLAVE106");
+	entities["LLAVE106"]->setType(ITEM);
+	entities["MALETA"] = new Item(DESC_CASE);
+	entities["MALETA"]->setName("MALETA");
+	entities["MALETA"]->setType(ITEM);
+	entities["PISTOLA"] = new Item(DESC_GUN);
+	entities["PISTOLA"]->setName("PISTOLA");
+	entities["PISTOLA"]->setType(ITEM);
+	entities["POLLO"] = new Item(DESC_CHICKEN);
+	entities["POLLO"]->setName("POLLO");
+	entities["POLLO"]->setType(ITEM);
+	entities["SILLA"] = new Item(DESC_CHAIR);
+	entities["SILLA"]->setName("SILLA");
+	entities["SILLA"]->setType(ITEM);
+	entities["CORDEL"] = new Item(DESC_CORD);
+	entities["CORDEL"]->setName("CORDEL");
+	entities["CORDEL"]->setType(ITEM);
+	entities["ARMARIO"] = new Item(DESC_CLOSET);
+	entities["ARMARIO"]->setName("ARMARIO");
+	entities["ARMARIO"]->setType(ITEM);
+	entities["CANDADO"] = new Item(DESC_LOCK);
+	entities["CANDADO"]->setName("CANDADO");
+	entities["CANDADO"]->setType(ITEM);
+	entities["TORNILLO"] = new Item(DESC_SCREW);
+	entities["TORNILLO"]->setName("TORNILLO");
+	entities["TORNILLO"]->setType(ITEM);
+	entities["BEBIDA"] = new Item(DESC_DRINK);
+	entities["BEBIDA"]->setName("BEBIDA");
+	entities["BEBIDA"]->setType(ITEM);
 	entities["WHISKY"] = new Item(DESC_WHISKY);
 	entities["WHISKY"]->setName("WHISKY");
 	entities["WHISKY"]->setType(ITEM);
-	entities["POT"] = new Item(DESC_POT);
-	entities["POT"]->setName("OLLA");
-	entities["POT"]->setType(ITEM);
-	entities["KNIFE"] = new Item(DESC_KNIFE);
-	entities["KNIFE"]->setName("CUCHILLO");
-	entities["KNIFE"]->setType(ITEM);
-	entities["PICTURE"] = new Item(DESC_PICTURE);
-	entities["PICTURE"]->setName("CUADRO");
-	entities["PICTURE"]->setType(ITEM);
+	entities["OLLA"] = new Item(DESC_POT);
+	entities["OLLA"]->setName("OLLA");
+	entities["OLLA"]->setType(ITEM);
+	entities["CUCHILLO"] = new Item(DESC_KNIFE);
+	entities["CUCHILLO"]->setName("CUCHILLO");
+	entities["CUCHILLO"]->setType(ITEM);
+	entities["CUADRO"] = new Item(DESC_PICTURE);
+	entities["CUADRO"]->setName("CUADRO");
+	entities["CUADRO"]->setType(ITEM);
 
 	//NPCs	
 	entities["DIMITRI"] = new _NPC(DESC_DIMI1);
@@ -133,159 +133,29 @@ World::World()
 	entities["MARGE"]->setName("MARGE");
 	
 	//exits
-	Exit* exit1 = new Exit("");
-	exit1->setType(EXIT);
-	exit1->setName("ESTE");
-	exit1->setDirection(_EAST);
-	exit1->setDestination((Room*)entities["CORRIDOR1"]);
-	entities["EAST_HALL_EXIT"] = exit1;
 	
-	Exit* exit2 = new Exit("");
-	exit2->setType(EXIT);
-	exit2->setName("OESTE");
-	exit2->setDirection(_WEST);
-	exit2->setDestination((Room*)entities["CORRIDOR2"]);
-	entities["WEST_HALL_EXIT"] = exit2;
-
-	Exit* exit3 = new Exit("");
-	exit3->setType(EXIT);
-	exit3->setName("ESTE");
-	exit3->setDirection(_EAST);
-	exit3->setDestination((Room*)entities["HALL"]);
-	entities["EAST_CORRIDOR2_EXIT"] = exit3;
-
-	Exit* exit4 = new Exit("");
-	exit4->setType(EXIT);
-	exit4->setName("OESTE");
-	exit4->setDirection(_WEST);
-	exit4->setDestination((Room*)entities["MAINTENANCE"]);
-	entities["WEST_CORRIDOR2_EXIT"] = exit4;
-
-	Exit* exit5 = new Exit("");
-	exit5->setType(EXIT);
-	exit5->setName("ESTE");
-	exit5->setDirection(_EAST);
-	exit5->setDestination((Room*)entities["KITCHEN"]);
-	entities["EAST_CORRIDOR1_EXIT"] = exit5;
-
-	Exit* exit6 = new Exit("");
-	exit6->setType(EXIT);
-	exit6->setName("OESTE");
-	exit6->setDirection(_WEST);
-	exit6->setDestination((Room*)entities["HALL"]);
-	entities["WEST_CORRIDOR1_EXIT"] = exit6;
-
-	Exit* exit7 = new Exit("");
-	exit7->setType(EXIT);
-	exit7->setName("OESTE");
-	exit7->setDirection(_WEST);
-	exit7->setDestination((Room*)entities["CORRIDOR1"]);
-	entities["WEST_KITCHEN_EXIT"] = exit7;
-
-	Exit* exit8 = new Exit("");
-	exit8->setType(EXIT);
-	exit8->setName("ESTE");
-	exit8->setDirection(_EAST);
-	exit8->setDestination((Room*)entities["CORRIDOR2"]);
-	entities["EAST_MAINTENANCE_EXIT"] = exit8;
-
-	Exit* exit9 = new Exit("");
-	exit9->setType(EXIT);
-	exit9->setName("H101");
-	exit9->setDirection(ATRAVESARH101);
-	exit9->setDestination((Room*)entities["R101"]);
-	entities["R101_EXIT"] = exit9;
-	
-	Exit* exit10 = new Exit("");
-	exit10->setType(EXIT);
-	exit10->setName("H101");
-	exit10->setDirection(ATRAVESARH101);
-	exit10->setDestination((Room*)entities["CORRIDOR1"]);
-	entities["R101_CORRIDOR_EXIT"] = exit10;
-
-	Exit* exit11 = new Exit("");
-	exit11->setType(EXIT);
-	exit11->setName("H102");
-	exit11->setDirection(ATRAVESARH102);
-	exit11->setDestination((Room*)entities["R102"]);
-	entities["R102_EXIT"] = exit11;
-
-	Exit* exit12 = new Exit("");
-	exit12->setType(EXIT);
-	exit12->setName("H102");
-	exit12->setDirection(ATRAVESARH102);
-	exit12->setDestination((Room*)entities["CORRIDOR1"]);
-	entities["R102_CORRIDOR_EXIT"] = exit12;
-
-	Exit* exit13 = new Exit("");
-	exit13->setType(EXIT);
-	exit13->setName("H103");
-	exit13->setDirection(ATRAVESARH103);
-	exit13->setDestination((Room*)entities["R103"]);
-	entities["R103_EXIT"] = exit13;
-
-	Exit* exit14 = new Exit("");
-	exit14->setType(EXIT);
-	exit14->setName("H104");
-	exit14->setDirection(ATRAVESARH104);
-	exit14->setDestination((Room*)entities["R104"]);
-	entities["R104_EXIT"] = exit14;
-
-	Exit* exit15 = new Exit("");
-	exit15->setType(EXIT);
-	exit15->setName("H104");
-	exit15->setDirection(ATRAVESARH104);
-	exit15->setDestination((Room*)entities["CORRIDOR1"]);
-	entities["R104_CORRIDOR_EXIT"] = exit15;
-
-	Exit* exit16 = new Exit("");
-	exit16->setType(EXIT);
-	exit16->setName("H105");
-	exit16->setDirection(ATRAVESARH105);
-	exit16->setDestination((Room*)entities["R105"]);
-	entities["R105_EXIT"] = exit16;
-
-	Exit* exit17 = new Exit("");
-	exit17->setType(EXIT);
-	exit17->setName("H106");
-	exit17->setDirection(ATRAVESARH106);
-	exit17->setDestination((Room*)entities["R106"]);
-	entities["R106_EXIT"] = exit17;
-
-	Exit* exit18 = new Exit("");
-	exit18->setType(EXIT);
-	exit18->setName("H106");
-	exit18->setDirection(ATRAVESARH106);
-	exit18->setDestination((Room*)entities["CORRIDOR2"]);
-	entities["R106_CORRIDOR_EXIT"] = exit18;
-
-	Exit* exit19 = new Exit("");
-	exit19->setType(EXIT);
-	exit19->setName("H107");
-	exit19->setDirection(ATRAVESARH107);
-	exit19->setDestination((Room*)entities["R107"]);
-	entities["R107_EXIT"] = exit19;
-
-	Exit* exit20 = new Exit("");
-	exit20->setType(EXIT);
-	exit20->setName("H107");
-	exit20->setDirection(ATRAVESARH107);
-	exit20->setDestination((Room*)entities["CORRIDOR2"]);
-	entities["R107_CORRIDOR_EXIT"] = exit20;
-
-	Exit* exit21 = new Exit("");
-	exit21->setType(EXIT);
-	exit21->setName("H108");
-	exit21->setDirection(ATRAVESARH108);
-	exit21->setDestination((Room*)entities["R108"]);
-	entities["R108_EXIT"] = exit21;
-
-	Exit* exit22 = new Exit("");
-	exit22->setType(EXIT);
-	exit22->setName("H108");
-	exit22->setDirection(ATRAVESARH108);
-	exit22->setDestination((Room*)entities["CORRIDOR2"]);
-	entities["R108_CORRIDOR_EXIT"] = exit22;
+	entities["EAST_HALL_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["CORRIDOR1"]);
+	entities["WEST_HALL_EXIT"] =  new Exit("OESTE", _WEST, (Room*)entities["CORRIDOR2"]);
+	entities["EAST_CORRIDOR2_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["HALL"]);
+	entities["WEST_CORRIDOR2_EXIT"] = new Exit("OESTE", _WEST, (Room*)entities["MAINTENANCE"]);	
+	entities["EAST_CORRIDOR1_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["KITCHEN"]);
+	entities["WEST_CORRIDOR1_EXIT"] = new Exit("OESTE", _WEST, (Room*)entities["HALL"]);	
+	entities["WEST_KITCHEN_EXIT"] = new Exit("OESTE", _WEST, (Room*)entities["CORRIDOR1"]);
+	entities["EAST_MAINTENANCE_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["CORRIDOR2"]);
+	entities["R101_EXIT"] = new Exit("H101", ATRAVESARH101, (Room*)entities["R101"]);
+	entities["R101_CORRIDOR_EXIT"] = new Exit("H101", ATRAVESARH101, (Room*)entities["CORRIDOR1"]);
+	entities["R102_EXIT"] = new Exit("H102", ATRAVESARH102, (Room*)entities["R102"]);	
+	entities["R102_CORRIDOR_EXIT"] = new Exit("H102", ATRAVESARH102, (Room*)entities["CORRIDOR1"]);
+	entities["R103_EXIT"] = new Exit("H103", ATRAVESARH103, (Room*)entities["R103"]);
+	entities["R104_EXIT"] = new Exit("H104", ATRAVESARH104, (Room*)entities["R104"]);
+	entities["R104_CORRIDOR_EXIT"] = new Exit("H104", ATRAVESARH104, (Room*)entities["CORRIDOR1"]);
+	entities["R105_EXIT"] = new Exit("H105", ATRAVESARH105, (Room*)entities["R105"]);
+	entities["R106_EXIT"] = new Exit("H106", ATRAVESARH106, (Room*)entities["R106"]);
+	entities["R106_CORRIDOR_EXIT"] = new Exit("H106", ATRAVESARH106, (Room*)entities["CORRIDOR2"]);	
+	entities["R107_EXIT"] = new Exit("H107", ATRAVESARH107, (Room*)entities["R107"]);	
+	entities["R107_CORRIDOR_EXIT"] = new Exit("H107", ATRAVESARH107, (Room*)entities["CORRIDOR2"]);	
+	entities["R108_EXIT"] = new Exit("H108", ATRAVESARH108, (Room*)entities["R108"]);	
+	entities["R108_CORRIDOR_EXIT"] = new Exit("H108", ATRAVESARH108, (Room*)entities["CORRIDOR2"]);
 
 
 	//entities placement
@@ -306,45 +176,45 @@ World::World()
 
 	entities["HALL"]->insertEntity(entities["EAST_HALL_EXIT"]);
 	entities["HALL"]->insertEntity(entities["WEST_HALL_EXIT"]);
-	entities["HALL"]->insertEntity(entities["DRINK"]);
+	entities["HALL"]->insertEntity(entities["BEBIDA"]);
 	entities["HALL"]->insertEntity(entities["MARGE"]);
-	entities["HALL"]->insertEntity(entities["KEY_H106"]);
+	entities["HALL"]->insertEntity(entities["LLAVE106"]);
 
-	entities["MAINTENANCE"]->insertEntity(entities["NAILS"]);
-	entities["MAINTENANCE"]->insertEntity(entities["WRENCH"]);
-	entities["MAINTENANCE"]->insertEntity(entities["HAMMER"]);
-	entities["MAINTENANCE"]->insertEntity(entities["POISON"]);
+	entities["MAINTENANCE"]->insertEntity(entities["CLAVOS"]);
+	entities["MAINTENANCE"]->insertEntity(entities["HERRAMIENTA"]);
+	entities["MAINTENANCE"]->insertEntity(entities["MARTILLO"]);
+	entities["MAINTENANCE"]->insertEntity(entities["MATARRATAS"]);
 	entities["MAINTENANCE"]->insertEntity(entities["EAST_MAINTENANCE_EXIT"]);	
 	
-	entities["CASE"]->insertEntity(entities["GUN"]);
-	entities["R107"]->insertEntity(entities["CASE"]);
-	entities["R107"]->insertEntity(entities["CHICKEN"]);
+	entities["MALETA"]->insertEntity(entities["PISTOLA"]);
+	entities["R107"]->insertEntity(entities["MALETA"]);
+	entities["R107"]->insertEntity(entities["POLLO"]);
 	entities["R107"]->insertEntity(entities["R107_CORRIDOR_EXIT"]);
 
-	entities["R108"]->insertEntity(entities["CORD"]);
-	entities["R108"]->insertEntity(entities["PICTURE"]);
+	entities["R108"]->insertEntity(entities["CORDEL"]);
+	entities["R108"]->insertEntity(entities["CUADRO"]);
 	entities["R108"]->insertEntity(entities["R108_CORRIDOR_EXIT"]);
 
 	entities["R106"]->insertEntity(entities["LILY"]);
 	entities["R106"]->insertEntity(entities["R106_CORRIDOR_EXIT"]);
 
 	entities["R101"]->insertEntity(entities["LUCAS"]);
-	entities["R101"]->insertEntity(entities["CHAIR"]);
+	entities["R101"]->insertEntity(entities["SILLA"]);
 	entities["R101"]->insertEntity(entities["R101_CORRIDOR_EXIT"]);
 
-	entities["R102"]->insertEntity(entities["STICK"]);
+	entities["R102"]->insertEntity(entities["PALO"]);
 	entities["R102"]->insertEntity(entities["R102_CORRIDOR_EXIT"]);
 
-	entities["R104"]->insertEntity(entities["STONE"]);
-	entities["R104"]->insertEntity(entities["VASE"]);
+	entities["R104"]->insertEntity(entities["PIEDRA"]);
+	entities["R104"]->insertEntity(entities["JARRON"]);
 	entities["R104"]->insertEntity(entities["R104_CORRIDOR_EXIT"]);
-
-	entities["CLOSET"]->insertEntity(entities["WHISKY"]);
-	entities["KITCHEN"]->insertEntity(entities["CLOSET"]);
-	entities["KITCHEN"]->insertEntity(entities["LOCK"]);
-	entities["KITCHEN"]->insertEntity(entities["KNIFE"]);
-	entities["KITCHEN"]->insertEntity(entities["POT"]);
-	entities["KITCHEN"]->insertEntity(entities["SCREW"]);
+	
+	entities["KITCHEN"]->insertEntity(entities["ARMARIO"]);
+	entities["ARMARIO"]->insertEntity(entities["WHISKY"]);
+	entities["KITCHEN"]->insertEntity(entities["CANDADO"]);
+	entities["KITCHEN"]->insertEntity(entities["CUCHILLO"]);
+	entities["KITCHEN"]->insertEntity(entities["OLLA"]);
+	entities["KITCHEN"]->insertEntity(entities["TORNILLO"]);
 	entities["KITCHEN"]->insertEntity(entities["WEST_KITCHEN_EXIT"]);
 
 	//player

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Constants.h"
-#include "PrintUtilities.h"
 #include <string>
 #include <list>
 using namespace std;
@@ -9,6 +8,7 @@ using namespace std;
 class Entity
 {
 public:
+	explicit Entity();
 	explicit Entity(string description);
 	~Entity();
 	virtual void update();

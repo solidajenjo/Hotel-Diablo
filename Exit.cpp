@@ -23,6 +23,16 @@ Room * Exit::getDestination()
 	return destination;
 }
 
+
+Exit::Exit(string name, directions direction, Room * destination)
+{
+	Entity("");
+	this->type = EXIT;	
+	this->name = name;
+	this->direction = direction;
+	this->destination = destination;
+}
+
 Exit::~Exit()
 {
 }
