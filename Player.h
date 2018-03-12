@@ -12,6 +12,7 @@ public:
 	virtual void update();
 	void insertItem(Item* item, PrintUtilities* pu);
 	void dropItem(Item* item, PrintUtilities* pu);
+	bool hasItem(Item* item);
 	set<Entity*> getInventory();
 private:
 	set<Entity*> inventory;

@@ -18,6 +18,8 @@ public:
 	void insertEntity(Entity* item);
 	void removeEntity(Entity* item);
 	void setType(entityType type);
+	string getDescription();
+	void setDescription(string description);
 	entityType getType();
 protected:
 

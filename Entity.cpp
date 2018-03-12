@@ -45,6 +45,16 @@ void Entity::setType(entityType type)
 	this->type = type;
 }
 
+string Entity::getDescription()
+{
+	return description;
+}
+
+void Entity::setDescription(string description)
+{
+	this->description = description;
+}
+
 entityType Entity::getType()
 {
 	return type;

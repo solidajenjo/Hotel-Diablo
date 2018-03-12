@@ -34,6 +34,12 @@ void Player::dropItem(Item * item, PrintUtilities * pu)
 	}
 }
 
+bool Player::hasItem(Item * item)
+{
+	if (inventory.find(item) != inventory.end()) return true;
+	else return false;
+}
+
 set<Entity*> Player::getInventory()
 {
 	return inventory;

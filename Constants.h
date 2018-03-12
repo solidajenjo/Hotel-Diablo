@@ -9,6 +9,7 @@ enum directions {
 };
 
 
+
 //keycodes
 #define KEY_BACKSPACE 8
 #define KEY_ENTER 13
@@ -20,8 +21,6 @@ enum directions {
 #define INPUT_Y 30
 #define CENTRAL_LINE 57
 #define TIME_LINE 4
-#define INVENTORY_Y 2
-#define INVENTORY_X 15
 #define ORDERS_Y 20
 #define ORDERS_X 15
 #define GAME_OUTPUT_SIZE 24
@@ -29,7 +28,7 @@ enum directions {
 #define TIME_Y 3
 #define TIME_X 98
 #define INVENTORY_X 5
-#define INVENTORY_Y 10
+#define INVENTORY_Y 5
 //messages
 // á \240 | é \202 | í \241 | ó \242 | ú \243 | ñ \244
 #define BAD_GRAMMAR_CODE 1
@@ -45,6 +44,8 @@ enum directions {
 #define INVENTORY_FULL "No puedes llevar m\240s cosas."
 #define UNOWNED_OBJECT "No tienes ese objeto."
 #define NOT_NEAR_OBJECT "No veo eso por aqu\241 cerca."
+#define NOT_IN_POSSESSION "No tienes eso."
+#define NOT_TAKE_PERSON "No voy a coger una persona. Estoy cansado."
 //time
 #define TOTAL_TIME 15*60 //10 minutes
 
@@ -97,3 +98,19 @@ enum directions {
 #define DESC_POT "Una olla con restos de comida pegada."
 #define DESC_KNIFE "Una cuchillo de carnicero."
 #define DESC_PICTURE "Una cuadro de un hacha primitiva. Esta hecha con un PALO,  una PIEDRA y CORDEL."
+
+#define LOCK_PICTURE "Est\240 bien clavado en la pared."
+#define LOCK_DRINK "MARGE: Ni se te ocurra mierdecilla."
+#define LOCK_SCREW "Necesitar\241a una herramienta"
+#define LOCK_LOCK "Est\240 agarrado al armario"
+#define LOCK_CLOSET "Pesa demasiado."
+#define LOCK_CASE "Me da verguenza que me vean con eso por ah\241."
+#define LOCK_KEY "No puedo mientras MARGE est\240 vigilando."
+#define LOCK_H106 "No creo que pueda abrirla sin la LLAVE."
+#define LOCK_FOREVER "No se abrira de ninguna manera."
+#define LOCK_MAINT "Esta cerrada. No parece muy solida. La podr\241a romper si    tuviera un HACHA."
+#define LOCK_CHAIR "Esta LUCAS encima. Mejor la dejo."
+
+//action result
+
+#define LUCAS_DEATH "Lucas patalea durante un momento hasta que deja de moverse. Se ha meado encima."
