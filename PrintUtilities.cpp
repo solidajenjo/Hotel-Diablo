@@ -30,11 +30,11 @@ PrintUtilities::PrintUtilities()
 	coutXY(1, ORDERS_Y + 1, "Movimiento: N/NORTE | E/ESTE | S/SUR | O/OESTE");
 	coutXY(1, ORDERS_Y + 2, "            ATRAVESAR puerta");
 	coutXY(1, ORDERS_Y + 3, "Acciones: USAR objeto          | USAR objeto EN objeto");
-	coutXY(1, ORDERS_Y + 4, "	   COGER objeto         | TIRAR objeto");
+	coutXY(1, ORDERS_Y + 4, "	   COGER objeto         | DEJAR objeto");
 	coutXY(1, ORDERS_Y + 5, "	   COMBINAR objeto CON objeto (CON objeto)*");
 	coutXY(1, ORDERS_Y + 6, "	   ABRIR objeto         ");
-	coutXY(1, ORDERS_Y + 7, "	   EXAMINAR obj/pers    | HABLAR persona");
-	coutXY(1, ORDERS_Y + 8, "          MIRAR                | MATAR persona");
+	coutXY(1, ORDERS_Y + 7, "	   EXAMINAR obj/pers    | HABLAR CON persona");
+	coutXY(1, ORDERS_Y + 8, "          MIRAR                ");
 	coutXY(1, ORDERS_Y + 9, "______________________________________________________________________________________________________________________");
 
 	coutXY(INVENTORY_X, INVENTORY_Y, "Inventario 0/3");
@@ -73,7 +73,7 @@ void PrintUtilities::consoleCout(std::string msg)
 			l++;
 		}
 	}
-	gameOutput[line] = buffer;
+	if (buffer != "") gameOutput[line] = buffer;
 	render();
 }
 

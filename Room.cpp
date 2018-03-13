@@ -61,11 +61,11 @@ bool Room::isLocked()
 	return locked;
 }
 
-bool Room::containsItem(Item * item)
+bool Room::containsEntity(Entity * entity)
 {
-	if (item == nullptr) return false;
+	if (entity == nullptr) return false;
 	for (list<Entity*>::iterator it = contains.begin(); it != contains.end(); it++) {
-		if (*it == item) return true;
+		if (*it == entity) return true;
 	}
 	return false;
 }

@@ -76,6 +76,7 @@ World::World(PrintUtilities* pu)
 	entities["OLLA"] = new Item(DESC_POT, "OLLA", ITEM, false, "");
 	entities["CUCHILLO"] = new Item(DESC_KNIFE, "CUCHILLO", ITEM, false, "");
 	entities["CUADRO"] = new Item(DESC_PICTURE, "CUADRO", ITEM, true, LOCK_PICTURE);
+	entities["HACHA"] = new Item(DESC_AXE, "HACHA", ITEM, false, "");
 
 	//NPCs	
 	entities["DIMITRI"] = new _NPC(DESC_DIMI1);
@@ -91,10 +92,22 @@ World::World(PrintUtilities* pu)
 	entities["MARGE"]->setType(NPC);
 	entities["MARGE"]->setName("MARGE");
 	
+	_NPC* dimi = (_NPC*)entities["DIMITRI"];
+	dimi->addPosibleLocations((Room*)entities["R101"]);
+	dimi->addPosibleLocations((Room*)entities["R102"]);
+	dimi->addPosibleLocations((Room*)entities["R104"]);
+	dimi->addPosibleLocations((Room*)entities["R106"]);
+	dimi->addPosibleLocations((Room*)entities["R107"]);
+	dimi->addPosibleLocations((Room*)entities["R108"]);
+	dimi->addPosibleLocations((Room*)entities["MAINTENANCE"]);
+	dimi->addPosibleLocations((Room*)entities["KITCHEN"]);
+	dimi->addPosibleLocations((Room*)entities["CORRIDOR1"]);
+	dimi->addPosibleLocations((Room*)entities["CORRIDOR2"]);
+	dimi->setCurrentRoom((Room*)entities["MAINTENANCE"]);
 	//exits
 	
-	entities["EAST_HALL_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["CORRIDOR1"], false, "");
-	entities["WEST_HALL_EXIT"] =  new Exit("OESTE", _WEST, (Room*)entities["CORRIDOR2"], false, "");
+	entities["EAST_HALL_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["CORRIDOR1"], true, LOCK_HALL);
+	entities["WEST_HALL_EXIT"] =  new Exit("OESTE", _WEST, (Room*)entities["CORRIDOR2"], true, LOCK_HALL);
 	entities["EAST_CORRIDOR2_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["HALL"], false, "");
 	entities["WEST_CORRIDOR2_EXIT"] = new Exit("OESTE", _WEST, (Room*)entities["MAINTENANCE"], true, LOCK_MAINT);
 	entities["EAST_CORRIDOR1_EXIT"] = new Exit("ESTE", _EAST, (Room*)entities["KITCHEN"], false, "");
@@ -116,7 +129,7 @@ World::World(PrintUtilities* pu)
 	entities["R108_EXIT"] = new Exit("H108", ATRAVESARH108, (Room*)entities["R108"], false, "");
 	entities["R108_CORRIDOR_EXIT"] = new Exit("H108", ATRAVESARH108, (Room*)entities["CORRIDOR2"], false, "");
 
-
+	
 	//entities placement
 	entities["CORRIDOR1"]->insertEntity(entities["WEST_CORRIDOR1_EXIT"]);
 	entities["CORRIDOR1"]->insertEntity(entities["EAST_CORRIDOR1_EXIT"]);
@@ -144,6 +157,8 @@ World::World(PrintUtilities* pu)
 	entities["MAINTENANCE"]->insertEntity(entities["MARTILLO"]);
 	entities["MAINTENANCE"]->insertEntity(entities["MATARRATAS"]);
 	entities["MAINTENANCE"]->insertEntity(entities["EAST_MAINTENANCE_EXIT"]);	
+	entities["MAINTENANCE"]->insertEntity(entities["DIMITRI"]);
+
 	
 	entities["MALETA"]->insertEntity(entities["PISTOLA"]);
 	entities["R107"]->insertEntity(entities["MALETA"]);
@@ -163,8 +178,7 @@ World::World(PrintUtilities* pu)
 
 	entities["R102"]->insertEntity(entities["PALO"]);
 	entities["R102"]->insertEntity(entities["R102_CORRIDOR_EXIT"]);
-
-	entities["R104"]->insertEntity(entities["PIEDRA"]);
+	
 	entities["R104"]->insertEntity(entities["JARRON"]);
 	entities["R104"]->insertEntity(entities["R104_CORRIDOR_EXIT"]);
 	
@@ -176,25 +190,7 @@ World::World(PrintUtilities* pu)
 	entities["KITCHEN"]->insertEntity(entities["TORNILLO"]);
 	entities["KITCHEN"]->insertEntity(entities["WEST_KITCHEN_EXIT"]);
 
-	//player
-	Player* player = new Player("Tu mismo.");
-	player->setName("JUGADOR");
-	player->setCurrentRoom((Room*)entities["HALL"]);
-	entities["PLAYER"] = player;
-
-	entities["HALL"]->insertEntity(entities["PLAYER"]);
-
-	actions["EMPUJAR SILLA"] = &World::lucasHang;
-	//actions["USAR MATARRATAS EN OBJETO"] = &World::poisonMarge;
-}
-
-bool World::lucasHang() {	
-	entities["R101"]->setDescription(DESC_R101_2);	
-	pu->consoleCout(LUCAS_DEATH);
-}
-
-void World::poisonMarge() {
-
+	
 }
 
 World::~World()
@@ -202,7 +198,9 @@ World::~World()
 }
 
 void World::update() {
-
+	for (map<string, Entity*>::iterator it = entities.begin(); it != entities.end(); ++it) {
+		it->second->update();
+	}
 }
 
 Entity* World::getEntity(string name)
@@ -210,11 +208,11 @@ Entity* World::getEntity(string name)
 	return entities[name];
 }
 
-bool World::tryAction(string action)
+void World::insertEntity(string name, Entity * entity)
 {
-	(*this.*actions[action])();
-	return false;
+	entities[name] = entity;
 }
+
 
 void World::moveCreature(string name, Room * origin, Room * destination)
 {

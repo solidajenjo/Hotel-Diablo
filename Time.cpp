@@ -25,6 +25,7 @@ void Time::update()
 	struct tm * timeinfo;
 	time(&timer);
 	int currentTime = timer;
+	timeInSeconds = timer;
 	int remainingTime = (endTime - currentTime);
 	minutes = remainingTime  / 60;
 	seconds = remainingTime  % 60;
@@ -54,4 +55,14 @@ void Time::update()
 		pu->coutXY(TIME_X, TIME_Y, "Tiempo restante " + strMinute + ":" + strSecond);
 		lastSecond = seconds;
 	}
+}
+
+bool Time::isFinished()
+{
+	return outOfTime;
+}
+
+int Time::getTime()
+{
+	return timeInSeconds;
 }

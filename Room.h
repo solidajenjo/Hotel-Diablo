@@ -13,7 +13,7 @@ public:
 	void showRoom(PrintUtilities* pu);
 	vector<Entity*> getExits();
 	bool isLocked();
-	bool containsItem(Item* item);
+	bool containsEntity(Entity* item);
 	void lockDoor();
 private:
 	bool locked = false;

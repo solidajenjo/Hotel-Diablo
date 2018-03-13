@@ -14,7 +14,17 @@ public:
 	void dropItem(Item* item, PrintUtilities* pu);
 	bool hasItem(Item* item);
 	set<Entity*> getInventory();
+	void initActionManager();
+	bool tryAction(string action);
+	void init(World* world, PrintUtilities* pu);
 private:
+	typedef bool(Player::*function)();
+	bool lucasHang();
+	bool poisonMarge();
+	bool craftAxe();
+	World* world;
+	PrintUtilities* pu;
 	set<Entity*> inventory;
+	map<string, function> actions;
 };
 

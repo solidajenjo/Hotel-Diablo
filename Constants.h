@@ -46,9 +46,10 @@ enum directions {
 #define NOT_NEAR_OBJECT "No veo eso por aqu\241 cerca."
 #define NOT_IN_POSSESSION "No tienes eso."
 #define NOT_TAKE_PERSON "No voy a coger una persona. Estoy cansado."
+#define UNLOCK_HALL "Se desbloquean las puertas del HALL."
 //time
 #define TOTAL_TIME 15*60 //10 minutes
-
+#define DIMITRI_MOVE_TIME 30 //moves each 30 seconds
 //room definitions
 #define DESC_HALL "El hall de un hotel de estilo Art d\202co. Se puede vislumbrarla belleza del lugar debajo de la capa de mugre que cubre   todos los rincones del mismo. Hay un mostrador en el centro en el que una mujer fuma con la vista perdida."
 #define DESC_CORRIDOR1 "Un pasillo de hotel estandard. Hay 4 puertas(H101, H102,   H103, H104). Al este hay una cocina."
@@ -75,6 +76,7 @@ enum directions {
 #define DESC_MARGE1 "La recepcionista. No parece muy simp\240tica."
 #define DESC_MARGE2 "La recepcionista del hotel muerta. Sigue sin parecer       simp\240tica."
 //Items descriptions
+#define DESC_AXE "Un hacha rudimentaria. No creo que aguante mas de un golpe."
 #define DESC_EMPTY_GUN "Un revolver sin balas."
 #define DESC_STICK "Un palo."
 #define DESC_STONE "Una piedra con forma triangular. Esta afilada"
@@ -99,6 +101,7 @@ enum directions {
 #define DESC_KNIFE "Una cuchillo de carnicero."
 #define DESC_PICTURE "Una cuadro de un hacha primitiva. Esta hecha con un PALO,  una PIEDRA y CORDEL."
 
+
 #define LOCK_PICTURE "Est\240 bien clavado en la pared."
 #define LOCK_DRINK "MARGE: Ni se te ocurra mierdecilla."
 #define LOCK_SCREW "Necesitar\241a una herramienta"
@@ -110,7 +113,14 @@ enum directions {
 #define LOCK_FOREVER "No se abrira de ninguna manera."
 #define LOCK_MAINT "Esta cerrada. No parece muy solida. La podr\241a romper si    tuviera un HACHA."
 #define LOCK_CHAIR "Esta LUCAS encima. Mejor la dejo."
-
+#define LOCK_HALL "Las puertas estan cerradas y no tienen tirador. Se deben   abrir desde otra parte."
 //action result
 
-#define LUCAS_DEATH "Lucas patalea durante un momento hasta que deja de moverse. Se ha meado encima."
+#define LUCAS_DEATH "Lucas patalea durante un momento hasta que deja de moverse. Se ha meado encima. Se le cae una PIEDRA del bolsillo."
+
+//conversation
+#define M0 "La recepcionista del hotel MARGE te dirije una mirada      condenscendiente.                                           MARGE: \"Que es lo que quieres?\"                             1 - Que significa la cuenta atras?"
+#define M1 "La recepcionista del hotel MARGE te dirije una mirada      condenscendiente.                                           MARGE: \"Que es lo que quieres?\"                             1 - Que significa la cuenta atras?                          2 - Huespedes                                               3 - Donde esta Dimitri?                                     4 - BEBIDA?"
+#define M2 "Ah si eso, eso es que te quedan unos 15 minutos para       escapar de aqui. Que putada no? Deberias haber recuperado elconocimiento antes. En este hotel, ademas de ti, hay 2      huespedes,solo el ultimo que quede al final podrá salir del hotel con vida. Hay una que es una buena pieza, me da ganas de vomitar. La tenemos encerrada en la H106 porque es       peligrosa. El otro es un tal LUCAS no se donde se habra     metido. DIMITRI el de mantenimiento me parece que debe saberalgo mas de el. Te voy a desbloquear las puertas del HALL   para que vayas a llorar en privado o lo que sea que te      apetezca  hacer antes del final."
+#define M3 "Se mueve muy a menudo de sitio. Cada 30 segundos mas o     menos. Dimitri estara en "
+#define M4 " hasta dentro de "

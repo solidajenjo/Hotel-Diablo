@@ -11,7 +11,10 @@ public:
 	virtual void update();
 	void setCurrentRoom(Room* room);
 	Room* getCurrentRoom();
+	bool isDead();
+	void kill();
 protected:
 	Room* location;
+	bool dead = false;
 };
 

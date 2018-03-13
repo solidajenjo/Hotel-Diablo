@@ -20,3 +20,13 @@ Room * Creature::getCurrentRoom()
 {
 	return location;
 }
+
+bool Creature::isDead()
+{
+	return dead;
+}
+
+void Creature::kill()
+{
+	dead = true;
+}
