@@ -35,3 +35,8 @@ void _NPC::setTimer(Time &time)
 {
 	this->time = &time;
 }
+
+void _NPC::resetTimer()
+{
+	timer = 0;
+}

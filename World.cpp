@@ -64,7 +64,7 @@ World::World(PrintUtilities* pu)
 	entities["CLAVOS"] = new Item(DESC_NAILS, "CLAVOS", ITEM, false, "");
 	entities["LLAVE106"] = new Item(DESC_KEYR106, "LLAVE106", ITEM, true, LOCK_KEY);
 	entities["MALETA"] = new Item(DESC_CASE, "MALETA", ITEM, true, LOCK_CASE);
-	entities["PISTOLA"] = new Item(DESC_GUN, "PISTOLA", ITEM, false, "");
+	entities["ROPITA"] = new Item(DESC_CLOTHES, "ROPITA", ITEM, false, "");
 	entities["POLLO"] = new Item(DESC_CHICKEN, "POLLO", ITEM, false, "");
 	entities["SILLA"] = new Item(DESC_CHAIR, "SILLA", ITEM, true, LOCK_CHAIR);
 	entities["CORDEL"] = new Item(DESC_CORD, "CORDEL", ITEM, false, "");
@@ -160,7 +160,7 @@ World::World(PrintUtilities* pu)
 	entities["MAINTENANCE"]->insertEntity(entities["DIMITRI"]);
 
 	
-	entities["MALETA"]->insertEntity(entities["PISTOLA"]);
+	entities["MALETA"]->insertEntity(entities["ROPITA"]);
 	entities["R107"]->insertEntity(entities["MALETA"]);
 	entities["R107"]->insertEntity(entities["POLLO"]);
 	entities["R107"]->insertEntity(entities["R107_CORRIDOR_EXIT"]);

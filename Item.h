@@ -8,6 +8,7 @@ public:
 	~Item();
 	virtual void update();
 	bool isLocked();
+	void unlock();
 	string getLockMsg();
 private:
 	bool locked;

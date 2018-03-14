@@ -40,6 +40,11 @@ void Entity::removeEntity(Entity * item)
 	contains.remove(item);
 }
 
+list<Entity*> Entity::getContents()
+{
+	return contains;
+}
+
 void Entity::setType(entityType type)
 {
 	this->type = type;

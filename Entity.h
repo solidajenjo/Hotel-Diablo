@@ -17,6 +17,7 @@ public:
 	string getName();
 	void insertEntity(Entity* item);
 	void removeEntity(Entity* item);
+	list<Entity*> getContents();
 	void setType(entityType type);
 	string getDescription();
 	void setDescription(string description);

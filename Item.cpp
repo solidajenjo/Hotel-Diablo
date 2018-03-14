@@ -24,6 +24,11 @@ bool Item::isLocked()
 	return locked;
 }
 
+void Item::unlock()
+{
+	locked = false;
+}
+
 string Item::getLockMsg()
 {
 	return lockMsg;

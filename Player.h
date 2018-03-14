@@ -17,14 +17,24 @@ public:
 	void initActionManager();
 	bool tryAction(string action);
 	void init(World* world, PrintUtilities* pu);
+	void setLucasDaughter();
+	bool getLucasDaughter();
+	void setLucasUnhanged();
+	void setGoodEnd();
+	bool getGoodEnd();
 private:
 	typedef bool(Player::*function)();
 	bool lucasHang();
+	bool killLucas();
 	bool poisonMarge();
+	bool openMaintenance();
 	bool craftAxe();
 	World* world;
 	PrintUtilities* pu;
 	set<Entity*> inventory;
 	map<string, function> actions;
+	bool lucasDaughter = false;
+	bool lucasUnhanged = false;
+	bool goodEnd = false;
 };
 

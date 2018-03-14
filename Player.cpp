@@ -15,6 +15,26 @@ void Player::init(World * world, PrintUtilities* pu) {
 	this->world = world;
 	this->pu = pu;
 }
+void Player::setLucasDaughter()
+{
+	lucasDaughter = true;
+}
+bool Player::getLucasDaughter()
+{
+	return lucasDaughter;
+}
+void Player::setLucasUnhanged()
+{
+	lucasUnhanged = true;
+}
+void Player::setGoodEnd()
+{
+	goodEnd = true;
+}
+bool Player::getGoodEnd()
+{
+	return goodEnd;
+}
 void Player::initActionManager() {
 	actions["EMPUJARSILLA"] = &Player::lucasHang;
 	actions["COMBINARPALOCONPIEDRACONCORDEL"] = &Player::craftAxe;
@@ -23,6 +43,9 @@ void Player::initActionManager() {
 	actions["COMBINARPALOCONCORDELCONPIEDRA"] = &Player::craftAxe;
 	actions["COMBINARPIEDRACONCORDELCONPALO"] = &Player::craftAxe;
 	actions["COMBINARPIEDRACONPALOCONCORDEL"] = &Player::craftAxe;
+	actions["USARCUCHILLOENLUCAS"] = &Player::killLucas;
+	actions["USARHACHAENMANTENIMIENTO"] = &Player::openMaintenance;	
+
 	//actions["USAR MATARRATAS EN BEBIDA"] = &Player::poisonMarge;
 }
 bool Player::tryAction(string action)
@@ -66,7 +89,7 @@ set<Entity*> Player::getInventory()
 }
 
 bool Player::lucasHang() {
-	if (!((Creature*)world->getEntity("LUCAS"))->isDead()
+	if (!lucasUnhanged and !((Creature*)world->getEntity("LUCAS"))->isDead()
 		&& location == world->getEntity("R101")) {
 		location->setDescription(DESC_R101_2);
 		pu->consoleCout(LUCAS_DEATH);
@@ -78,9 +101,39 @@ bool Player::lucasHang() {
 	return true;
 }
 
+bool Player::killLucas()
+{
+	if (!lucasUnhanged and !((Creature*)world->getEntity("LUCAS"))->isDead()
+		&& location == world->getEntity("R101")
+		&& this->hasItem((Item*)world->getEntity("CUCHILLO"))) {
+		pu->consoleCout(KILL_LUCAS);
+		pu->consoleCout(LUCAS_DEATH2);
+		((_NPC*)world->getEntity("LUCAS"))->kill();
+		location->setDescription(DESC_R101_3);
+		location->removeEntity(world->getEntity("LUCAS"));
+		world->getEntity("R101")->insertEntity(world->getEntity("PIEDRA"));
+		return true;
+	}
+	pu->consoleCout(I_CANT_DO_THAT);
+	return true;
+}
+
 bool Player::poisonMarge()
 {
 	return false;
+}
+
+bool Player::openMaintenance()
+{
+	if (this->hasItem((Item*)world->getEntity("HACHA"))
+		and location == (Room*)world->getEntity("CORRIDOR2")) {
+		pu->consoleCout(MAINT_OPEN);
+		vector<Entity*> exits = location->getExits();
+		for (auto exit : exits) {
+			if (exit->getName() == "OESTE") ((Exit*)exit)->unLock();
+		}
+	}
+	return true;
 }
 
 bool Player::craftAxe()

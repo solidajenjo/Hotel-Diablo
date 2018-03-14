@@ -12,6 +12,7 @@ public:
 	string getNextPosition();
 	void addPosibleLocations(Room* location);
 	void setTimer(Time &time);
+	void resetTimer();
 private:
 	Room * nextPositon;
 	vector<Room*> posibleLocations;
