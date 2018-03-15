@@ -2,8 +2,8 @@
 
 Repo: https://github.com/solidajenjo/Hotel-Diablo
 
-Requisitos Interfaz de usuario: Consola windows 700X500px en consolas inferiores
-como la de windows 8 no se pude ver correctamente.
+Requisitos Interfaz de usuario: Consola windows 620X500px minimo.
+
 
 Hotel diablo es una pequeña aventura conversacional contra reloj en la que debes
 de escapar de un misterioso hotel. Hay 3 maneras de acabar el juego. Matando a 

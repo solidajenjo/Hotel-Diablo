@@ -21,12 +21,14 @@ PrintUtilities::PrintUtilities()
 		coutXY(CENTRAL_LINE, i, "|");
 	}
 	//time underline
-	coutXY(CENTRAL_LINE + 1, TIME_LINE, "_____________________________________________________________");
+	coutXY(CENTRAL_LINE + 1, TIME_LINE, "_________________________________________________________");
 	//inventory	
 	coutXY(INVENTORY_X, INVENTORY_Y, "Inventario 0/3");
 
-	coutXY(INVENTORY_X - 3, INVENTORY_Y + 8, "   Escribe AYUDA   ");
-	coutXY(INVENTORY_X - 3, INVENTORY_Y + 9, "para info. comandos");
+	coutXY(INVENTORY_X, INVENTORY_Y + 8, "Escribe");
+	coutXY(INVENTORY_X, INVENTORY_Y + 9, "AYUDA");
+	coutXY(INVENTORY_X, INVENTORY_Y + 10, "para info.");
+	coutXY(INVENTORY_X, INVENTORY_Y + 11, "comandos");
 }
 
 void PrintUtilities::help(){
