@@ -2,12 +2,15 @@
 
 Repo: https://github.com/solidajenjo/Hotel-Diablo
 
+Requisitos Interfaz de usuario: Consola windows 700X500px en consolas inferiores
+como la de windows 8 no se pude ver correctamente.
+
 Hotel diablo es una pequeña aventura conversacional contra reloj en la que debes
 de escapar de un misterioso hotel. Hay 3 maneras de acabar el juego. Matando a 
 los huespedes con un cuchillo de la cocina o ayudando a un padre a encontrar a 
 su hija perdida.
 
-Las acciones posibles estan en la pantalla.
+Las acciones posibles estan en la pantalla escribiendo AYUDA.
 
 Para conseguir la llave de la habitación en la que esta la niña hay que envenanar
 el whisky de la mujer de recepción.

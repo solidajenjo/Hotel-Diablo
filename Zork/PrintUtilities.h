@@ -21,7 +21,7 @@ public:
 	void render();
 	string manageInput();
 	void updateInventory(set<Entity*> inventory);
-
+	void help();
 private:
 	HANDLE hStdout;
 	COORD destCoord;

@@ -16,17 +16,17 @@ enum directions {
 
 //game input/output
 #define OUTPUT_LENGTH 60
-#define OUTPUT_LINE_START_X 59
+#define OUTPUT_LINE_START_X 27
 #define OUTPUT_START_Y 5
 #define INPUT_Y 30
-#define CENTRAL_LINE 57
+#define CENTRAL_LINE 24
 #define TIME_LINE 4
 #define ORDERS_Y 20
 #define ORDERS_X 15
 #define GAME_OUTPUT_SIZE 24
-#define MAX_INPUT_SIZE 117
+#define MAX_INPUT_SIZE 80
 #define TIME_Y 3
-#define TIME_X 98
+#define TIME_X 47
 #define INVENTORY_X 5
 #define INVENTORY_Y 5
 //messages

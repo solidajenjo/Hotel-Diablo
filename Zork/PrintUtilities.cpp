@@ -10,7 +10,7 @@ PrintUtilities::PrintUtilities()
 	newOrder = true;
 	//init game output
 	for (int i = 0; i < GAME_OUTPUT_SIZE; ++i) {
-		gameOutput.push_back("");		
+		gameOutput.push_back("");
 	}
 	consoleClearLine = "";
 	for (int i = 0; i < OUTPUT_LENGTH; ++i) consoleClearLine += ' ';
@@ -22,22 +22,28 @@ PrintUtilities::PrintUtilities()
 	}
 	//time underline
 	coutXY(CENTRAL_LINE + 1, TIME_LINE, "_____________________________________________________________");
-	//inventory
-	coutXY(INVENTORY_X, INVENTORY_Y, "INVENTARIO");
-	//orders
-	coutXY(1, ORDERS_Y - 1, "________________________________________________________");
-	coutXY(ORDERS_X, ORDERS_Y, "ORDENES (* opcional)");
-	coutXY(1, ORDERS_Y + 1, "Movimiento: N/NORTE | E/ESTE | S/SUR | O/OESTE");
-	coutXY(1, ORDERS_Y + 2, "            ATRAVESAR puerta");
-	coutXY(1, ORDERS_Y + 3, "Acciones: USAR objeto          | USAR objeto EN obj/pers");
-	coutXY(1, ORDERS_Y + 4, "	   COGER objeto         | DEJAR objeto");
-	coutXY(1, ORDERS_Y + 5, "	   COMBINAR objeto CON objeto (CON objeto)*");
-	coutXY(1, ORDERS_Y + 6, "	   ABRIR objeto         | EMPUJAR objeto ");
-	coutXY(1, ORDERS_Y + 7, "	   EXAMINAR obj/pers    | HABLAR CON persona");
-	coutXY(1, ORDERS_Y + 8, "          MIRAR                ");
-	coutXY(1, ORDERS_Y + 9, "______________________________________________________________________________________________________________________");
-
+	//inventory	
 	coutXY(INVENTORY_X, INVENTORY_Y, "Inventario 0/3");
+
+	coutXY(INVENTORY_X - 3, INVENTORY_Y + 8, "   Escribe AYUDA   ");
+	coutXY(INVENTORY_X - 3, INVENTORY_Y + 9, "para info. comandos");
+}
+
+void PrintUtilities::help(){
+	//help
+	this->consoleCout("ORDENES (* opcional)");
+	this->consoleCout("------------------------------------------------");
+	this->consoleCout("Movimiento:");
+	this->consoleCout("N/NORTE | E/ESTE | S/SUR | O/OESTE");
+	this->consoleCout("ATRAVESAR puerta");
+	this->consoleCout("Acciones:");
+	this->consoleCout("USAR objeto | USAR objeto EN obj / pers");
+	this->consoleCout("COGER objeto | DEJAR objeto");
+	this->consoleCout("COMBINAR objeto CON objeto (CON objeto)*");
+	this->consoleCout("ABRIR objeto | EMPUJAR objeto ");
+	this->consoleCout("EXAMINAR obj/pers | HABLAR CON persona");
+	this->consoleCout("MIRAR");	
+	
 }
 
 
@@ -135,9 +141,11 @@ string PrintUtilities::manageInput()
 void PrintUtilities::updateInventory(set<Entity*> inventory)
 {
 	coutXY(INVENTORY_X, INVENTORY_Y, "Inventario " + to_string(inventory.size()) + "/3");
-	coutXY(INVENTORY_X, INVENTORY_Y + 1, "                        ");
-	coutXY(INVENTORY_X, INVENTORY_Y + 2, "                        ");
-	coutXY(INVENTORY_X, INVENTORY_Y + 3, "                        ");
+	coutXY(INVENTORY_X, INVENTORY_Y + 1, "                   ");
+	coutXY(INVENTORY_X, INVENTORY_Y + 2, "                   ");
+	coutXY(INVENTORY_X, INVENTORY_Y + 3, "                   ");
+
+
 	int i = 1;
 	for (set<Entity*>::iterator it = inventory.begin(); it != inventory.end(); ++it) {
 		coutXY(INVENTORY_X, INVENTORY_Y + (i++), (*it)->getName());
