@@ -143,9 +143,9 @@ string PrintUtilities::manageInput()
 void PrintUtilities::updateInventory(set<Entity*> inventory)
 {
 	coutXY(INVENTORY_X, INVENTORY_Y, "Inventario " + to_string(inventory.size()) + "/3");
-	coutXY(INVENTORY_X, INVENTORY_Y + 1, "                   ");
-	coutXY(INVENTORY_X, INVENTORY_Y + 2, "                   ");
-	coutXY(INVENTORY_X, INVENTORY_Y + 3, "                   ");
+	coutXY(INVENTORY_X, INVENTORY_Y + 1, "              ");
+	coutXY(INVENTORY_X, INVENTORY_Y + 2, "              ");
+	coutXY(INVENTORY_X, INVENTORY_Y + 3, "              ");
 
 
 	int i = 1;
